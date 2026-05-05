@@ -75,8 +75,7 @@ ol {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  /*flex-grow: 1;*/
-  width: 390px;
+  flex-grow: 1;
 }
 
 .search-form {
@@ -95,14 +94,14 @@ ol {
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-bottom: 19px;
   margin-right: 140px;
 }
 
 .result__video-container {
   width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
+  height: 381px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -112,11 +111,14 @@ ol {
 }
 
 .content__list {
+  display: grid;
   gap: 30px;
 }
 
 .content__list-container {
+  display: grid;
   gap: 30px;
+  margin-bottom: 8px;
 }
 
 .content__video-card {
@@ -125,15 +127,13 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: 103;
+  height: 103px;
   min-width: 194px;
-  /*object-fit: contain;
-  object-position: right center;*/
+  object-position: right center;
+  margin-left: 7px;
 }
 
-.content__video-card-description-container {
-  flex-grow: 1;
-}
+
 
 .search-form__fieldset-title {
 font-family: 'Fira Sans Condensed';
@@ -189,6 +189,10 @@ line-clamp: 1;
 
 }
 
+.content__video-card-description-container {
+  width: 190px;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -201,7 +205,7 @@ line-clamp: 1;
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .search-form__fieldset {
@@ -224,6 +228,9 @@ line-clamp: 1;
   background-color: transparent;
   appearance: none;
   cursor: pointer;
+  height: 27px;
+  width: 225px;
+  font-size: 16px;
 }
 
 .search-form__textfield::placeholder {
@@ -240,13 +247,13 @@ line-clamp: 1;
 
 .search-form__pseudo-checkbox {
   height: 22px;
-  width: 25.2px;
+  width: 22.2px;
   padding: 1px;
   border: #fff solid 1px;
 }
 
 .search-form__pseudo-checkbox::after {
-  content: none;
+  content: ' ';
   display: block;
   background-color: #fff;
   width: 100%;
@@ -258,8 +265,9 @@ line-clamp: 1;
   cursor: pointer;
 }
 
-.search-form__checkbox:checked {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
+  
 }
 
 .search-form__checkbox:hover + .search-form__label-text {
@@ -310,7 +318,7 @@ line-clamp: 1;
 }
 
 .more-button {
-  /*object-fit: contain;*/
+  object-fit: contain;
   width: 390px;
   height: 34px;
   cursor: pointer;
