@@ -56,8 +56,8 @@ ol {
   display: flex;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
-  margin-top: 133px;
+  height: auto;
+  margin-top: 669px;
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 133px;
@@ -88,37 +88,39 @@ ol {
 
 .content__list-container {
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
-  overflow-x: hidden;
+  display: grid;
+  gap: 30px;
+  margin-bottom: 8px;
 }
 
 .title {
   margin-bottom: 19px;
   margin-right: 140px;
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
 }
 
 .result__video-container {
   width: 711px;
-  height: 381px;
+  height: 386px;
   margin-bottom: 25px;
   position: relative;
 }
 
 .result__video {
   width: 711px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .content__list {
   display: grid;
   gap: 30px;
-}
-
-.content__list-container {
-  display: grid;
-  gap: 30px;
-  margin-bottom: 8px;
 }
 
 .content__video-card {
@@ -131,12 +133,13 @@ ol {
   min-width: 194px;
   object-position: right center;
   margin-left: 7px;
+  object-fit: cover;
 }
 
 
 
 .search-form__fieldset-title {
-font-family: 'Fira Sans Condensed';
+font-family: 'Fira Sans Condensed', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
@@ -145,29 +148,21 @@ color: #FFFFFF;
 
 }
 
-.title {
- font-family: 'Oswald';
-font-style: normal;
-font-weight: 700;
-font-size: 75px;
-line-height: 94%;
-text-transform: uppercase;
-
-}
-
 .content__accent {
 width: 260px;
-height: 210px;
+height: auto;
 color: #545050;
 }
 
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
+  display: block;
 }
 
 .content__video-card-title {
-font-family: 'Oswald';
+font-family: 'Oswald', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
@@ -180,12 +175,13 @@ white-space: nowrap;
 }
 
 .content__video-card-description {
-font-family: 'Fira Sans Condensed';
+font-family: 'Fira Sans Condensed', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 16px;
-line-clamp: 1;
+line-clamp: 4;
+text-overflow: ellipsis;
 
 }
 
@@ -220,6 +216,11 @@ line-clamp: 1;
 }
 
 .search-form__textfield {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
   color: #fff;
   border-bottom:#fff solid 1px;
   border-top:#fff solid 1px;
@@ -230,7 +231,7 @@ line-clamp: 1;
   cursor: pointer;
   height: 27px;
   width: 225px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .search-form__textfield::placeholder {
@@ -246,8 +247,8 @@ line-clamp: 1;
 }
 
 .search-form__pseudo-checkbox {
-  height: 22px;
-  width: 22.2px;
+  height: 49px;
+  width: 212px;
   padding: 1px;
   border: #fff solid 1px;
 }
@@ -270,11 +271,11 @@ line-clamp: 1;
   
 }
 
-.search-form__checkbox:hover + .search-form__label-text {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
-.search-form__checkbox:has(:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: #fff solid 1px;
 }
 
@@ -283,66 +284,44 @@ line-clamp: 1;
   background-color: transparent;
   color: #fff;
   width: 47px;
-  height: 22px;
+  min-height: 34px;
   font-family: 'Fira Sans Condensed';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  cursor: pointer;
 
 }
 
 .search-form__submit-button {
-  height: 34px;
   width: 194px;
   align-self: flex-end;
-  cursor: pointer;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
-.search-form__submit-button:active {
+button:active {
   background-color: #545050;
-   outline: solid 1px #fff;
 }
 
-.search-form__submit-button:focus {
+.button:focus {
   outline: none;
 }
 
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: double 1px #fff;
 }
 
 .more-button {
   object-fit: contain;
   width: 390px;
-  height: 34px;
-  cursor: pointer;
-}
-
-.more-button:hover {
-  text-decoration: underline;
-}
-
-.more-button:active {
-  background-color: #545050;
-  outline: solid 1px #fff;
-}
-
-.more-button:focus {
-  outline: none;
-}
-
-.more-button:focus-visible {
-   outline: double 1px #fff;
 }
 
 .content__card-link {
-  cursor: pointer;
   cursor: pointer;
   display: block;
 }
