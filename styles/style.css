@@ -58,7 +58,6 @@ ol {
   align-items: flex-end;
   width: 1140px;
   margin: auto;
-  height: 534px;
   border: 1px solid transparent;
 
 }
@@ -242,7 +241,7 @@ ol {
 
 
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
